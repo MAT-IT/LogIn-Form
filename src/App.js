@@ -1,11 +1,13 @@
-import React from 'react'
-import './App.css';
+import React from "react";
+import "./App.css";
+import Login from "./component/login";
+import Singup from "./component/singup";
 
 function App() {
   return (
     <div className="App">
-      <h1>hello react</h1>
-      
+      {/* <Login />  */}
+      <Singup/> 
     </div>
   );
 }
