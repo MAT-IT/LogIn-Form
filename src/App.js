@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
-import Login from "./component/login";
-import Singup from "./component/singup";
+import SignInOutContainer from "./container";
 
 function App() {
   return (
     <div className="App">
-      {/* <Login />  */}
-      <Singup/> 
+      <SignInOutContainer/>
     </div>
   );
 }

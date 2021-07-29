@@ -15,13 +15,13 @@ import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 const Singup = () => {
-  const paperstyle = { padding: "30px 20px", width: 300, margin: "20px auto" };
+  const paperstyle = { padding:20 , width: 300, margin: "0 auto" };
   const headerstyle = { margin: 0 };
   const avatarstyle = { backgroundColor: "#22d222" };
   const genderstyle = { marginTop: 5 };
   return (
     <Grid>
-      <Paper elevation={20} style={paperstyle}>
+      <Paper  style={paperstyle}>
         <Grid align="center">
           <Avatar style={avatarstyle}>
             <AddCircleOutlineOutlinedIcon />
