@@ -1,8 +1,9 @@
 
 <!-- 
-yarn add @material-ui/core 
-yarn add @material-ui/icons
-
+ add @material-ui/core 
+ add @material-ui/icons
+ add formik
+ add yup
 -->
 
 
