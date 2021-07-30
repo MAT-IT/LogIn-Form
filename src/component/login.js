@@ -11,6 +11,7 @@ import React from "react";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
+import {Formik,Form} from "formik";
 
 const Login = ({handleChange}) => {
   const paperStyle = {
@@ -21,6 +22,11 @@ const Login = ({handleChange}) => {
   };
   const avatarStyle = { backgroundColor: "#22d222" };
   const btnstyle = { margin: "8px 0" };
+  const initialValues={
+    username="",
+    password="",
+    remember=false
+  }
   return (
     <Grid>
       <Paper  style={paperStyle}>
@@ -30,13 +36,18 @@ const Login = ({handleChange}) => {
           </Avatar>
           <h2>Sing In </h2>
         </Grid>
-        <TextField
+        <Formik initialValues={initialValues}>
+          {(props)=>(
+            <Form>
+                  <TextField
+          name="username"
           label="Username"
           placeholder="Enter Username"
           fullWidth
           required
         />
         <TextField
+          name="password"
           label="Password"
           placeholder="Password"
           type="password"
@@ -44,6 +55,7 @@ const Login = ({handleChange}) => {
           required
         />
         <FormControlLabel
+          name="remember"
           control={<Checkbox name="checkedB" color="primary" />}
           label="Remember me"
         />
@@ -56,6 +68,9 @@ const Login = ({handleChange}) => {
         >
           Sing In
         </Button>
+            </Form>
+          )}
+        </Formik>
         <Typography>
           <Link href="#">Forgot password</Link>
         </Typography>
